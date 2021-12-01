@@ -1,3 +1,6 @@
-const ORIGIN_URL = 'http://localhost:3000'
+const mysql = require('mysql2')
+require('dotenv').config()
+
+const ORIGIN_URL = process.env.ORIGIN_URL
 
 module.exports = ORIGIN_URL
