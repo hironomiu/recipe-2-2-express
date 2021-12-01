@@ -26,6 +26,7 @@ app.use(
 app.use(express.json())
 
 app.set('view engine', 'pug')
+app.set("trust proxy", 1);
 
 app.use(
   cors({
