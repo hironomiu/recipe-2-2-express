@@ -3,6 +3,8 @@ const jwt = require('jsonwebtoken')
 const config = require('../config/jwt.config')
 const promisePool = require('../config/db.js')
 const bcrypt = require('bcrypt')
+require('dotenv').config()
+const ORIGIN_DOMAIN = process.env.ORIGIN_DOMAIN
 const {
   validator,
   checkEmailIsEmpty,
@@ -76,7 +78,7 @@ router
           const token = jwt.sign(payload, config.jwt.secret, config.jwt.options)
           res.cookie('token', token, {
             httpOnly: true,
-            domain: 'localhost',
+            domain: ORIGIN_DOMAIN,
             path: '/',
             sameSite: 'none',
             secure: true,
