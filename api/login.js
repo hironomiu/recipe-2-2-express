@@ -78,6 +78,7 @@ router
           }
           const token = jwt.sign(payload, config.jwt.secret, config.jwt.options)
           res.cookie('token', token, {
+            maxAge: new Date() * 0.001 + 300,
             httpOnly: true,
             domain: ORIGIN_DOMAIN,
             path: '/',
