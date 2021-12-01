@@ -9,6 +9,8 @@ const promisePool = require('./config/db.js')
 const ORIGIN_URL = require('./config/index.js')
 const PORT = process.env.PORT || 5000
 
+console.log(ORIGIN_URL)
+
 const csrfProtection = csrf({
   cookie: true,
 })
