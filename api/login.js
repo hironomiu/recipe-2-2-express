@@ -5,6 +5,7 @@ const promisePool = require('../config/db.js')
 const bcrypt = require('bcrypt')
 require('dotenv').config()
 const ORIGIN_DOMAIN = process.env.ORIGIN_DOMAIN
+console.log(ORIGIN_DOMAIN)
 const {
   validator,
   checkEmailIsEmpty,
