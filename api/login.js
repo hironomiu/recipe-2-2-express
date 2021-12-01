@@ -81,7 +81,7 @@ router
             httpOnly: true,
             domain: ORIGIN_DOMAIN,
             path: '/',
-            sameSite: 'none',
+            sameSite: 'lax',
             secure: true,
           })
 
