@@ -11,6 +11,7 @@ const {
 router
   .route('/')
   .get(verifyToken, async (req, res) => {
+    console.log('GET /api/v1/tasks called')
     const [rows, fields] = await promisePool.query(
       'select a.id,a.title,a.task,a.status,b.name as status_name from tasks a inner join task_status b on a.status = b.id where a.user_id = ?',
       [req.decoded.id]
