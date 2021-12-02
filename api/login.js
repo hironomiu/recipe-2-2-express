@@ -80,7 +80,7 @@ router
           res.cookie('token', token, {
             maxAge: new Date() * 0.001 + 300,
             httpOnly: true,
-            domain: ORIGIN_DOMAIN,
+            // domain: ORIGIN_DOMAIN,
             path: '/',
             sameSite: 'none',
             secure: true,
