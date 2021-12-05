@@ -3,9 +3,6 @@ const jwt = require('jsonwebtoken')
 const config = require('../config/jwt.config')
 const promisePool = require('../config/db.js')
 const bcrypt = require('bcrypt')
-require('dotenv').config()
-const ORIGIN_DOMAIN = process.env.ORIGIN_DOMAIN
-console.log(ORIGIN_DOMAIN)
 const {
   validator,
   checkEmailIsEmpty,
@@ -80,7 +77,6 @@ router
           res.cookie('token', token, {
             maxAge: new Date() * 0.001 + 300,
             httpOnly: true,
-            // domain: ORIGIN_DOMAIN,
             path: '/',
             sameSite: 'none',
             secure: true,
