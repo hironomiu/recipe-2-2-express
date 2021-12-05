@@ -12,7 +12,12 @@ const PORT = process.env.PORT || 5000
 console.log(ORIGIN_URL)
 
 const csrfProtection = csrf({
-  cookie: true,
+  cookie: {
+    httpOnly: true,
+    secure: true,
+    path: '/',
+    sameSite: 'none',
+  }
 })
 
 app.use(cookieParser())
