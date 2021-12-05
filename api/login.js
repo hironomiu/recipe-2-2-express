@@ -32,7 +32,7 @@ router
     if (token) {
       jwt.verify(token, config.jwt.secret, (error, _) => {
         if (error) {
-          console.log('authErrorMessage')
+          console.log(authErrorMessage)
           return res.status(200).send(authErrorMessage)
         }
         console.log('success')
