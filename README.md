@@ -7,8 +7,15 @@
 
 ### .env
 
+以下を適時設定
+
 ```
 SECRET_KEY=''
+PORT=5000
 DB_HOST=''
+DB_USERNAME=''
+DB_PASSWORD=''
+DB_NAME=''
+DB_PORT=
 ORIGIN_URL=''
 ```
