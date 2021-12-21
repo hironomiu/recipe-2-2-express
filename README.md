@@ -4,6 +4,9 @@
 
 ## SetUp
 
+```
+npm install
+```
 
 ### .env
 
