@@ -10,7 +10,7 @@ npm install
 
 ### .env
 
-以下を適時設定
+以下を適時設定(`SECRET_KEY`の設定は必須)
 
 ```
 SECRET_KEY=''
