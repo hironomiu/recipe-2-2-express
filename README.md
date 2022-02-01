@@ -56,6 +56,8 @@ create table tasks (
 );
 ```
 
+パスワードは全てabcd
+
 ```
 truncate table users;
 insert into users(id,name,email,password) values
