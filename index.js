@@ -1,10 +1,10 @@
 const express = require('express')
 const app = express()
 const cors = require('cors')
-const http = require('http')
+// const http = require('http')
 const csrf = require('csurf')
 const cookieParser = require('cookie-parser')
-const server = http.createServer(app)
+// const server = http.createServer(app)
 const promisePool = require('./config/db.js')
 const ORIGIN_URL = require('./config/index.js')
 const PORT = process.env.PORT || 5000
@@ -73,6 +73,6 @@ app.use(
   })()
 )
 
-server.listen(PORT, () => {
+app.listen(PORT, () => {
   console.log(`listening on *:${PORT}`)
 })
